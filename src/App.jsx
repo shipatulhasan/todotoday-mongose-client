@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Todo from './Todo'
+import {Toaster} from 'react-hot-toast'
 
 function App() {
   return (
     <div className="App">
-      <h2 className='text-3xl'>Hello me</h2>
+      <Todo />
+      <Toaster />
     </div>
   )
 }
