@@ -1,6 +1,6 @@
 import React from 'react';
 import {BiTrash,BiEdit} from 'react-icons/bi'
-const Task = ({item,handleDelete}) => {
+const Task = ({item,handleDelete,findUpdateItem}) => {
     return (
         <div className='flex items-center gap-2 bg-white rounded px-2 mt-3'>
             <div className='flex-1'>
@@ -9,7 +9,7 @@ const Task = ({item,handleDelete}) => {
             </h2>
             </div>
             <div className='flex gap-2 items-center text-black'>
-                <BiEdit className='hover:cursor-pointer' />
+                <BiEdit className='hover:cursor-pointer' onClick={()=>findUpdateItem(item._id)} />
                 <BiTrash className='hover:cursor-pointer' onClick = {()=>handleDelete(item)} />
             </div>
         </div>
